@@ -1,0 +1,10 @@
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/FrameWork/FrameWorkSetting.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/HttpServer.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/RequestHandler/HttpRquestHandler.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/RequestHandler/Impl/HttpRequestHandlerImpl.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/annotation/GetMapping.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/annotation/PostMapping.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/annotation/RequestParam.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/annotation/RestController.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/controller/GrettingController.java
+/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/src/main/java/edu/escuelaing/arep/controller/MathController.java

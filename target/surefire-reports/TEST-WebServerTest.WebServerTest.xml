@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="WebServerTest.WebServerTest" time="1.574" tests="31" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="WebServerTest.WebServerTest" time="1.447" tests="31" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/surefire/surefirebooter-20250219191015236_3.jar /Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/surefire 2025-02-19T19-10-15_048-jvmRun1 surefire-20250219191015236_1tmp surefire_0-20250219191015236_2tmp"/>
+    <property name="sun.java.command" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire/surefirebooter-20250219220740402_3.jar /Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire 2025-02-19T22-07-40_181-jvmRun1 surefire-20250219220740402_1tmp surefire_0-20250219220740402_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/maritzamonsalvebautista"/>
     <property name="user.language" value="es"/>
@@ -23,13 +23,13 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION"/>
+    <property name="basedir" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/surefire/surefirebooter-20250219191015236_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire/surefirebooter-20250219220740402_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.4+8-LTS-274"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/64/j9lq708d6tjgvr_v5slngmp40000gn/T/"/>
     <property name="java.version" value="21.0.4"/>
-    <property name="user.dir" value="/Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION"/>
+    <property name="user.dir" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -57,158 +57,128 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldLoadMathControllerDivWithoutQuery" classname="WebServerTest.WebServerTest" time="0.061">
+  <testcase name="shouldLoadMathControllerDivWithoutQuery" classname="WebServerTest.WebServerTest" time="0.059">
     <system-out><![CDATA[Ready to receive on port: 35000 ...
 Received request: GET /app/div
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
   <testcase name="notShouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
     <system-out><![CDATA[Received request: GET /app/mul?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.013">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/greeting?name=maria
+  <testcase name="shouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.007">
+    <system-out><![CDATA[Received request: GET /app/greeting?name=maria
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.005">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/mul?number=3,2,5
+  <testcase name="shouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
+    <system-out><![CDATA[Received request: GET /app/mul?number=3,2,5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerPIWithoutQuery" classname="WebServerTest.WebServerTest" time="0.037">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/pi
+  <testcase name="shouldLoadMathControllerPIWithoutQuery" classname="WebServerTest.WebServerTest" time="0.029">
+    <system-out><![CDATA[Received request: GET /app/pi
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerRestWithoutQuery" classname="WebServerTest.WebServerTest" time="0.002">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/rest
+  <testcase name="shouldLoadMathControllerRestWithoutQuery" classname="WebServerTest.WebServerTest" time="0.003">
+    <system-out><![CDATA[Received request: GET /app/rest
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.005">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/sum?number=5,7
-Ready to receive on port: 35000 ...
+  <testcase name="notShouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.006">
+    <system-out><![CDATA[Received request: GET /app/sum?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.006">
+  <testcase name="shouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
     <system-out><![CDATA[Received request: GET /app/sum?number=3,2,5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMulWithoutQuery" classname="WebServerTest.WebServerTest" time="0.021">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/mul
+  <testcase name="shouldLoadMathControllerMulWithoutQuery" classname="WebServerTest.WebServerTest" time="0.013">
+    <system-out><![CDATA[Received request: GET /app/mul
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.005">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/greeting?name=maria
+  <testcase name="notShouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.014">
+    <system-out><![CDATA[Received request: GET /app/greeting?name=maria
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.006">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /style.css
-Ready to receive on port: 35000 ...
+  <testcase name="shouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.004">
+    <system-out><![CDATA[Received request: GET /style.css
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadGreetingControllerWithoutQuery" classname="WebServerTest.WebServerTest" time="0.024">
+  <testcase name="shouldLoadGreetingControllerWithoutQuery" classname="WebServerTest.WebServerTest" time="0.008">
     <system-out><![CDATA[Received request: GET /app/greeting
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerSumWithoutQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="shouldLoadMathControllerSumWithoutQuery" classname="WebServerTest.WebServerTest" time="0.005">
     <system-out><![CDATA[Received request: GET /app/sum
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.01">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/mul?number=5,7
+  <testcase name="notShouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.013">
+    <system-out><![CDATA[Received request: GET /app/mul?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDiv2WithQuery" classname="WebServerTest.WebServerTest" time="0.003">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/div?number=4,0
-Ready to receive on port: 35000 ...
+  <testcase name="shouldLoadMathControllerDiv2WithQuery" classname="WebServerTest.WebServerTest" time="0.004">
+    <system-out><![CDATA[Received request: GET /app/div?number=4,0
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.007">
+  <testcase name="notShouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.014">
     <system-out><![CDATA[Received request: GET /styles.css
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
   <testcase name="shouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.004">
     <system-out><![CDATA[Received request: GET /app/pi?decimals=5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.009">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/div?number=4,2
+  <testcase name="shouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.006">
+    <system-out><![CDATA[Received request: GET /app/div?number=4,2
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDiv1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.002">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/div?number=1
-Ready to receive on port: 35000 ...
+  <testcase name="shouldLoadMathControllerDiv1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.003">
+    <system-out><![CDATA[Received request: GET /app/div?number=1
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.014">
+  <testcase name="shouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.011">
     <system-out><![CDATA[Received request: GET /app/rest?number=3,2,5
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="notShouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.019">
     <system-out><![CDATA[Received request: GET /app/pi?decimals=5
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.011">
+  <testcase name="notShouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /prueba.js
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.017">
+  <testcase name="notShouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.007">
     <system-out><![CDATA[Received request: GET /imagen20.jpg
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.005">
+  <testcase name="notShouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /imagen8.png
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
   <testcase name="notShouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.004">
     <system-out><![CDATA[Received request: GET /web.html
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.015">
+  <testcase name="shouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.013">
     <system-out><![CDATA[Received request: GET /script.js
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.016">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
-Received request: GET /app/rest?number=5,7
-Ready to receive on port: 35000 ...
+  <testcase name="notShouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.004">
+    <system-out><![CDATA[Received request: GET /app/rest?number=5,7
 ]]></system-out>
   </testcase>
   <testcase name="shouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.004">
     <system-out><![CDATA[Received request: GET /imagen2.jpg
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.007">
+  <testcase name="shouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.012">
     <system-out><![CDATA[Received request: GET /imagen1.png
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMul1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.008">
+  <testcase name="shouldLoadMathControllerMul1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /app/mul?number=1
-Ready to receive on port: 35000 ...
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.015">
+  <testcase name="shouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.003">
     <system-out><![CDATA[Received request: GET /index.html
 ]]></system-out>
   </testcase>

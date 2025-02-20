@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URISyntaxException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import edu.escuelaing.arep.FrameWork.FrameWorkSetting;
 import edu.escuelaing.arep.RequestHandler.Impl.HttpRequestHandlerImpl;
 
@@ -17,6 +20,7 @@ public class HttpServer {
     private boolean running = true;
     private ServerSocket serverSocket;
     private static String ruta = "src/main/java/edu/escuelaing/arep/resources";
+    private ExecutorService threadPool;
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         HttpServer server = new HttpServer();
@@ -32,7 +36,9 @@ public class HttpServer {
      */
     public void startServer() throws IOException, URISyntaxException {
         try {
+            threadPool = Executors.newFixedThreadPool(10);
             serverSocket = new ServerSocket(PORT);
+            System.out.println("Ready to receive on port: " + PORT +" ...");
         } catch (IOException e) {
             System.err.println("Failed to start server on port: " + PORT);
             throw e;
@@ -41,11 +47,8 @@ public class HttpServer {
         while (running) {
             try {
                 FrameWorkSetting.loadComponents();
-                System.out.println("Ready to receive on port: " + PORT +" ...");
                 Socket clientSocket = serverSocket.accept();
-                HttpRequestHandlerImpl requestHandler = new HttpRequestHandlerImpl(clientSocket,ruta);
-
-                requestHandler.handlerRequest();
+                threadPool.submit(new HttpRequestHandlerImpl(clientSocket,ruta));
             } catch (IOException e) {
                 if (!running) {
                     System.out.println("Server stopped.");

@@ -9,15 +9,17 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.lang.Thread;
 
 import edu.escuelaing.arep.FrameWork.FrameWorkSetting;
+import edu.escuelaing.arep.RequestHandler.HttpRquestHandler;
 import edu.escuelaing.arep.annotation.RequestParam;
 
 /**
  * The HttpRequestHandler class is responsible for handling HTTP requests from clients.
  * It processes the request, determines the appropriate response, and sends it back to the client.
  */
-public class HttpRequestHandlerImpl {
+public class HttpRequestHandlerImpl implements HttpRquestHandler{
 
     private final Socket clientSocket;
     private String ruta;
@@ -70,6 +72,15 @@ public class HttpRequestHandlerImpl {
         in.close();
         clientSocket.close();  
     }  
+
+    @Override
+    public void run(){
+        try{
+            handlerRequest();
+        }catch(Exception e){
+            e.getStackTrace();
+        }
+    }
 
     /**
      * Redirects the request to the appropriate handler based on the HTTP method and file path.

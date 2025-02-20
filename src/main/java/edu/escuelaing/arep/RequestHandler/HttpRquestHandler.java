@@ -1,10 +1,7 @@
 package edu.escuelaing.arep.RequestHandler;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
+public interface HttpRquestHandler extends Runnable{
 
-public interface HttpRquestHandler {
-    
-    void handlerRequest() throws IOException, URISyntaxException;
-    
+    void run();
+
 } 

@@ -24,6 +24,15 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java/edu/escuelaing/arep/resources</directory>
+                <targetPath>${project.build.directory}/classes/edu/escuelaing/arep/resources</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <dependencies>
         <dependency>

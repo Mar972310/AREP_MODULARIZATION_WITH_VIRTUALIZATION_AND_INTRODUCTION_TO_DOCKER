@@ -16,10 +16,10 @@ import edu.escuelaing.arep.RequestHandler.Impl.HttpRequestHandlerImpl;
  */
 
 public class HttpServer {
-    private static final int PORT = 35000;
+    private static final int PORT =8000 ;
     private boolean running = true;
     private ServerSocket serverSocket;
-    private static String ruta = "src/main/java/edu/escuelaing/arep/resources";
+    private static String ruta = "target/classes/edu/escuelaing/arep/resources";
     private ExecutorService threadPool;
 
     public static void main(String[] args) throws IOException, URISyntaxException {

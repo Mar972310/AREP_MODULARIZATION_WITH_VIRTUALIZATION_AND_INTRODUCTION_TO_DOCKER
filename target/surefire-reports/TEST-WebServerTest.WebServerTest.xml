@@ -1,144 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="WebServerTest.WebServerTest" time="1.447" tests="31" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="WebServerTest.WebServerTest" time="1.497" tests="31" errors="0" skipped="0" failures="5">
   <properties>
-    <property name="java.specification.version" value="21"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER\target\test-classes;C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER\target\classes;C:\Users\maria.torres-m\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\maria.torres-m\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="21"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="CO"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire/surefirebooter-20250219220740402_3.jar /Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire 2025-02-19T22-07-40_181-jvmRun1 surefire-20250219220740402_1tmp surefire_0-20250219220740402_2tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\maria.torres-m\AppData\Local\Temp\surefire2971199341285958073\surefirebooter-20250225110532726_3.jar C:\Users\maria.torres-m\AppData\Local\Temp\surefire2971199341285958073 2025-02-25T11-05-32_386-jvmRun1 surefire-20250225110532726_1tmp surefire_0-20250225110532726_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/test-classes:/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/classes:/Users/maritzamonsalvebautista/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/maritzamonsalvebautista/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER\target\test-classes;C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER\target\classes;C:\Users\maria.torres-m\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\maria.torres-m\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/maritzamonsalvebautista"/>
-    <property name="user.language" value="es"/>
+    <property name="user.home" value="C:\Users\maria.torres-m"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-07-16"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/surefire/surefirebooter-20250219220740402_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maria.torres-m\AppData\Local\Temp\surefire2971199341285958073\surefirebooter-20250225110532726_3.jar"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="21.0.4+8-LTS-274"/>
-    <property name="user.name" value="maritzamonsalvebautista"/>
-    <property name="stdout.encoding" value="UTF-8"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="12.7.6"/>
+    <property name="java.runtime.version" value="17.0.10+11-LTS-240"/>
+    <property name="user.name" value="maria.torres-m"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="/Users/maritzamonsalvebautista/.m2/repository"/>
+    <property name="localRepository" value="C:\Users\maria.torres-m\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/var/folders/64/j9lq708d6tjgvr_v5slngmp40000gn/T/"/>
-    <property name="java.version" value="21.0.4"/>
-    <property name="user.dir" value="/Users/maritzamonsalvebautista/Downloads/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
-    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="C:\Users\MARIA~1.TOR\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.10"/>
+    <property name="user.dir" value="C:\Users\maria.torres-m\Downloads\AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/maritzamonsalvebautista/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\PowerShell\7;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files\PuTTY\;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\swipl\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Gradle\gradle-8.11\bin;C:\Program Files\MongoDB\Server\8.0\bin;C:\Program Files\MongoDBCompass\app-1.44.7;C:\Program Files\mongosh;C:\Users\maria.torres-m\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="21.0.4+8-LTS-274"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="java.vm.version" value="17.0.10+11-LTS-240"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldLoadMathControllerDivWithoutQuery" classname="WebServerTest.WebServerTest" time="0.059">
-    <system-out><![CDATA[Ready to receive on port: 35000 ...
+  <testcase name="shouldLoadMathControllerDivWithoutQuery" classname="WebServerTest.WebServerTest" time="0.069">
+    <system-out><![CDATA[Ready to receive on port: 6000 ...
 Received request: GET /app/div
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="notShouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.01">
     <system-out><![CDATA[Received request: GET /app/mul?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.007">
+  <testcase name="shouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.011">
     <system-out><![CDATA[Received request: GET /app/greeting?name=maria
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="shouldLoadMathControllerMulWithQuery" classname="WebServerTest.WebServerTest" time="0.005">
     <system-out><![CDATA[Received request: GET /app/mul?number=3,2,5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerPIWithoutQuery" classname="WebServerTest.WebServerTest" time="0.029">
+  <testcase name="shouldLoadMathControllerPIWithoutQuery" classname="WebServerTest.WebServerTest" time="0.012">
     <system-out><![CDATA[Received request: GET /app/pi
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerRestWithoutQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="shouldLoadMathControllerRestWithoutQuery" classname="WebServerTest.WebServerTest" time="0.005">
     <system-out><![CDATA[Received request: GET /app/rest
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.006">
+  <testcase name="notShouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.01">
     <system-out><![CDATA[Received request: GET /app/sum?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="shouldLoadMathControllerSumWithQuery" classname="WebServerTest.WebServerTest" time="0.008">
     <system-out><![CDATA[Received request: GET /app/sum?number=3,2,5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMulWithoutQuery" classname="WebServerTest.WebServerTest" time="0.013">
+  <testcase name="shouldLoadMathControllerMulWithoutQuery" classname="WebServerTest.WebServerTest" time="0.022">
     <system-out><![CDATA[Received request: GET /app/mul
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.014">
+  <testcase name="notShouldLoadGreetingControllerWithQuery" classname="WebServerTest.WebServerTest" time="0.024">
     <system-out><![CDATA[Received request: GET /app/greeting?name=maria
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="shouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.03">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at WebServerTest.WebServerTest.shouldLoadStaticFileCss(WebServerTest.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Received request: GET /style.css
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadGreetingControllerWithoutQuery" classname="WebServerTest.WebServerTest" time="0.008">
+  <testcase name="shouldLoadGreetingControllerWithoutQuery" classname="WebServerTest.WebServerTest" time="0.097">
     <system-out><![CDATA[Received request: GET /app/greeting
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerSumWithoutQuery" classname="WebServerTest.WebServerTest" time="0.005">
+  <testcase name="shouldLoadMathControllerSumWithoutQuery" classname="WebServerTest.WebServerTest" time="0.006">
     <system-out><![CDATA[Received request: GET /app/sum
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.013">
+  <testcase name="notShouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.004">
     <system-out><![CDATA[Received request: GET /app/mul?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDiv2WithQuery" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="shouldLoadMathControllerDiv2WithQuery" classname="WebServerTest.WebServerTest" time="0.007">
     <system-out><![CDATA[Received request: GET /app/div?number=4,0
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.014">
+  <testcase name="notShouldLoadStaticFileCss" classname="WebServerTest.WebServerTest" time="0.004">
     <system-out><![CDATA[Received request: GET /styles.css
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="shouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /app/pi?decimals=5
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.006">
+  <testcase name="shouldLoadMathControllerDivWithQuery" classname="WebServerTest.WebServerTest" time="0.001">
     <system-out><![CDATA[Received request: GET /app/div?number=4,2
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerDiv1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.003">
+  <testcase name="shouldLoadMathControllerDiv1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.005">
     <system-out><![CDATA[Received request: GET /app/div?number=1
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.011">
+  <testcase name="shouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /app/rest?number=3,2,5
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.019">
+  <testcase name="notShouldLoadMathControllerPIWithQuery" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /app/pi?decimals=5
 ]]></system-out>
   </testcase>
@@ -146,7 +182,7 @@ Received request: GET /app/div
     <system-out><![CDATA[Received request: GET /prueba.js
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.007">
+  <testcase name="notShouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.003">
     <system-out><![CDATA[Received request: GET /imagen20.jpg
 ]]></system-out>
   </testcase>
@@ -154,31 +190,179 @@ Received request: GET /app/div
     <system-out><![CDATA[Received request: GET /imagen8.png
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="notShouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.007">
     <system-out><![CDATA[Received request: GET /web.html
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.013">
+  <testcase name="shouldLoadStaticFileJs" classname="WebServerTest.WebServerTest" time="0.002">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at WebServerTest.WebServerTest.shouldLoadStaticFileJs(WebServerTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Received request: GET /script.js
 ]]></system-out>
   </testcase>
-  <testcase name="notShouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="notShouldLoadMathControllerRestWithQuery" classname="WebServerTest.WebServerTest" time="0.002">
     <system-out><![CDATA[Received request: GET /app/rest?number=5,7
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.004">
+  <testcase name="shouldLoadStaticImageJPG" classname="WebServerTest.WebServerTest" time="0.002">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at WebServerTest.WebServerTest.shouldLoadStaticImageJPG(WebServerTest.java:167)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Received request: GET /imagen2.jpg
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.012">
+  <testcase name="shouldLoadStaticImagePNG" classname="WebServerTest.WebServerTest" time="0.007">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at WebServerTest.WebServerTest.shouldLoadStaticImagePNG(WebServerTest.java:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Received request: GET /imagen1.png
 ]]></system-out>
   </testcase>
-  <testcase name="shouldLoadMathControllerMul1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.002">
+  <testcase name="shouldLoadMathControllerMul1WithoutQuery" classname="WebServerTest.WebServerTest" time="0.001">
     <system-out><![CDATA[Received request: GET /app/mul?number=1
 ]]></system-out>
   </testcase>
   <testcase name="shouldLoadStaticFileHtml" classname="WebServerTest.WebServerTest" time="0.003">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at WebServerTest.WebServerTest.shouldLoadStaticFileHtml(WebServerTest.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Received request: GET /index.html
 ]]></system-out>
   </testcase>

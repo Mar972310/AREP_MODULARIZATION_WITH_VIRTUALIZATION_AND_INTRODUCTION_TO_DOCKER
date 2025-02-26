@@ -65,8 +65,8 @@ You need to have the following installed:
 1. Clone the repository and navigate to the folder containing the `pom.xml` file using the following commands:
 
    ```sh
-   git clone https://github.com/Mar97231/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION.git
-   cd AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION
+   git clone https://github.com/Mar972310/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER.git
+   cd AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER
    ```
 
 2. Build the project:
@@ -78,12 +78,12 @@ You need to have the following installed:
    The console output should look something like this:
 
    ```sh
-    [INFO] Building jar: /Users/maritzamonsalvebautista/Downloads/AREP_APPLICATION-SERVERS_OBJECT-META-PROTOCOLS_IOC-PATTERN_REFLECTION/target/HttpServer-1.0-SNAPSHOT.jar
+    [INFO] Installing /Users/maritzamonsalvebautista/Desktop/AREP_MODULARIZATION_WITH_VIRTUALIZATION_AND_INTRODUCTION_TO_DOCKER/target/HttpServer-1.0-SNAPSHOT.jar to /Users/maritzamonsalvebautista/.m2/repository/edu/escuelaing/arep/HttpServer/1.0-SNAPSHOT/HttpServer-1.0-SNAPSHOT.jar
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
     [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  6.546 s
-    [INFO] Finished at: 2025-02-13T20:54:00-05:00
+    [INFO] Total time:  8.799 s
+    [INFO] Finished at: 2025-02-25T21:46:51-05:00
     [INFO] ------------------------------------------------------------------------
    ```
 
@@ -308,6 +308,39 @@ Processes and extracts query parameters from an HTTP request.
 - **Methods**:  
   - **`startServer()`**: Starts the server and listens for incoming connections and accepts client requests and delegates them to `HttpRequestHandler`.  
   - **`stopServer()`**: Stops the server by closing the server socket.
+
+## Despliegue en aws
+
+Luego de la compilacion del codigo, obtener el target con todas las dependecias copiadas y el archivo Dockerfile configurado, tendremos que:
+
+1. Ejecutar el comando para crear la imagen con nuestra respectiva configuracion docker build --tag httpserver . cuando termine con el comando docker ps podremos ver las imagenes que tenemos creadas o desde el docker Desktop
+
+CONTAINER ID   IMAGE                                                                    COMMAND                  CREATED          STATUS          PORTS                      NAMES
+52244cb6230c   arep_modularization_with_virtualization_and_introduction_to_docker-web   "java -cp ./classes:…"   4 minutes ago    Up 4 minutes    0.0.0.0:8080->6000/tcp     httpServer
+
+![alt text](images/dockerdesktopImagen1.png)
+
+
+2. Crearemos el container docker run -d -p 34000:6000 --name httpservercontainer httpserver y en consola nos saldra el Id del contenedor 
+c208db106d2cb034c0e6b097376ede35a3950e1fb6ee9455559338e5277693bf
+
+![alt text](images/dockerdesktopContainer1.png)
+
+3. Ejecutamos el comando docker-compose up -d despues de haber configurado la red de contenedores en el archivo docker-compose y automaticamente se crea el contenedor obtenemos lo siguiente en consola 
+
+![alt text](images/docker1.png)
+![alt text](images/docker2.png)
+
+4. Crearemos una imagen que apunte al repositorio que creamos en dockerHub con el siguiente comando 
+docker tag httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker y podemos evidenciar esto en las imagenes desde desktop de docker.
+
+![alt text](images/docker3.png)
+
+5. Iniciamos sesion con docker login y ejecutamos el comando docker push mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest y con esto cargaremos la imagen en docker hub.
+
+![alt text](images/docker4.png)
+
+
 
 ## TEST REPORT - Web Server IoC Framework
 

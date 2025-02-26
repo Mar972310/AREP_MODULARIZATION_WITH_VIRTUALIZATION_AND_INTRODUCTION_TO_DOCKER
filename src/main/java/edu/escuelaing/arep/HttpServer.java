@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.net.URISyntaxException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import edu.escuelaing.arep.FrameWork.FrameWorkSetting;
 import edu.escuelaing.arep.RequestHandler.Impl.HttpRequestHandlerImpl;
@@ -16,7 +17,7 @@ import edu.escuelaing.arep.RequestHandler.Impl.HttpRequestHandlerImpl;
  */
 
 public class HttpServer {
-    private static final int PORT =8000 ;
+    private static int PORT = 35000 ;
     private boolean running = true;
     private ServerSocket serverSocket;
     private static String ruta = "target/classes/edu/escuelaing/arep/resources";
@@ -24,6 +25,7 @@ public class HttpServer {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         HttpServer server = new HttpServer();
+        server.settingServer();
         server.startServer();
     }
 
@@ -44,6 +46,19 @@ public class HttpServer {
             throw e;
         }
 
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.out.println("Apagando el servidor...");
+            threadPool.shutdown();
+            try {
+                if (!threadPool.awaitTermination(5, TimeUnit.SECONDS)) {
+                    threadPool.shutdownNow();
+                }
+            } catch (InterruptedException e) {
+                threadPool.shutdownNow();
+            }
+            stopServer();
+        }));
+
         while (running) {
             try {
                 FrameWorkSetting.loadComponents();
@@ -56,6 +71,17 @@ public class HttpServer {
                 }
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void settingServer(){
+        String port = System.getenv("PORT");
+        String route = System.getenv("STATIC");
+        if (port != null){
+            PORT = Integer.parseInt(port);
+        }
+        if (route != null){
+            ruta = route;
         }
     }
 

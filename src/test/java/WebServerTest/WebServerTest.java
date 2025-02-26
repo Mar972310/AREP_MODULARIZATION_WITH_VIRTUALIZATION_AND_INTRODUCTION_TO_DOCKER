@@ -22,7 +22,7 @@ import edu.escuelaing.arep.HttpServer;
 public class WebServerTest {
 
     
-    private static final String URL = "http://localhost:6000/";
+    private static String URL = "http://localhost:35000/";
     private static HttpServer server;
     private static Thread serverThread;
 
@@ -274,7 +274,7 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertEquals("{\"response\":\"3.14159\"}", response);
+            assertEquals("{\"response\":\"3,14159\"}", response);
             request.disconnect();
 
         } catch (Exception e) {
@@ -294,7 +294,7 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertEquals("{\"response\":\"3.14\"}", response);
+            assertEquals("{\"response\":\"3,14\"}", response);
             request.disconnect();
 
         } catch (Exception e) {
@@ -314,7 +314,7 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertNotEquals("{\"response\":\"3.141\"}", response);
+            assertNotEquals("{\"response\":\"3,141\"}", response);
             request.disconnect();
 
         } catch (Exception e) {

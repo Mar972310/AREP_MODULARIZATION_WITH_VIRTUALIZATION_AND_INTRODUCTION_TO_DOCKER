@@ -341,6 +341,53 @@ docker tag httpserver mandarina972310/modularization_with_virtualization_and_int
 ![alt text](images/docker4.png)
 
 
+6. Desde la maquina de aws instalaremos docker con el comando sudo yum install docker y al final nos saldra el siguiente mensaje
+Installed:
+  containerd-1.7.25-1.amzn2023.0.1.x86_64
+  docker-25.0.8-1.amzn2023.0.1.x86_64
+  iptables-libs-1.8.8-3.amzn2023.0.2.x86_64
+  iptables-nft-1.8.8-3.amzn2023.0.2.x86_64
+  libcgroup-3.0-1.amzn2023.0.1.x86_64
+  libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64
+  libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64
+  libnftnl-1.2.2-2.amzn2023.0.2.x86_64
+  pigz-2.5-1.amzn2023.0.3.x86_64
+  runc-1.2.4-1.amzn2023.0.1.x86_64
+
+Complete!
+
+7. Iniciamos docker  sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+
+8. Crearemos un usuario con permisos, esto es opcional si no queremos utilizar el "sudo antes de cada comando", si lo realizamos despues de ejecutar en comando debemos terminar la conexion ssh y volver a ingresar
+
+sudo usermod -a -G docker ec2-user
+
+9. Descargaremos la imagen que tenemos en el repositorio mandarina972310/modularization_with_virtualization_and_introduction_to_docker, con el comando
+
+ docker run -d -p 8080:6000 --name httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker
+
+10. Se debe habilitar el puerto que asignamos despues del -p en el comando anterior, esto lo realizaremos desde la opcion de security de aws y agregaremos una nueva regla
+
+![alt text](images/security.png)
+
+11.Podremos consultar la pagina con el siguiente link http://http://ec2-44-203-95-133.compute-1.amazonaws.com:8080/index.html
+![alt text](image.png)
+
+Unable to find image 'mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest' locally
+latest: Pulling from mandarina972310/modularization_with_virtualization_and_introduction_to_docker
+5262579e8e45: Pull complete
+0eab4e2287a5: Pull complete
+7c002e8f6062: Pull complete
+337b80a2d7a0: Pull complete
+c5f810e84a39: Pull complete
+b48656c185bb: Pull complete
+Digest: sha256:3ff417efdcd782eaecae02ceb84772d85b10aceeb7a5a0de1638281046cf31c9
+Status: Downloaded newer image for mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest
+209181f116862af01921cb0033f301397a7e5a2abd5924c49a03d107a51cd0de
+
+
+
 
 ## TEST REPORT - Web Server IoC Framework
 

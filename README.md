@@ -60,6 +60,20 @@ You need to have the following installed:
    git version 2.46.0
    ```
 
+4. **Docker**
+   - To download, visit [here](https://www.docker.com/).
+   - Verify the installation by running:
+
+   ```sh
+   docker --version
+   ```
+
+   The output should look something like this:
+
+   ```sh
+   Docker version 25.0.3, build 4debf41
+   ```
+
 ### Installation
 
 1. Clone the repository and navigate to the folder containing the `pom.xml` file using the following commands:
@@ -223,7 +237,7 @@ Processes and extracts query parameters from an HTTP request.
 3. **Server Shutdown**: When the server needs to stop, the `ServerSocket` is closed and the server is gracefully shut down.
 
 ## Class Diagram
-![alt text](images/classesDiagram.png)
+![alt text](images/DiagramaClase.png)
 
 ### Class Descriptions
 
@@ -284,64 +298,156 @@ Processes and extracts query parameters from an HTTP request.
     - Returns the square root of the given number.  
     - Returns an error message if the input is negative.  
 
----
-
-### 5. **HttpRequestHandler**  
-- **Responsibility**: Handles incoming HTTP requests, processes them, and sends responses.  
-- **Methods**:  
-  - **`handlerRequest()`**:  
-    - Reads the incoming request.  
-    - Parses the request method, path, and query parameters.  
-    - Calls `handlerRequestApp()` to process the request.  
-  - **`handlerRequestApp(String method, String fileRequest, String queryRequest)`**:  
-    - Executes the corresponding method from `FrameWorkSetting` based on the request path.  
-
----
-
-### 6. **HttpServer**  
-- **Responsibility**: Initializes and manages the HTTP server, handling client connections.  
+### 5. **HttpRequestHandlerImpl**  
+- **Responsibility**: Implements `HttpRequestHandler` to handle HTTP requests.  
 - **Attributes**:  
-  - `static final int PORT`: The port number on which the server listens (35000).  
-  - `boolean running`: Controls whether the server is running.  
-  - `ServerSocket serverSocket`: The server socket for accepting connections.  
-  - `static String ruta`: The directory containing static resources.  
+  - `clientSocket`: Socket connecting the server and client.  
+  - `path`: Base directory for static files.  
+  - `out`: `PrintWriter` for sending responses.  
+  - `in`: `BufferedReader` for reading requests.  
+  - `bodyOut`: `BufferedOutputStream` for response body (e.g., static files).  
 - **Methods**:  
-  - **`startServer()`**: Starts the server and listens for incoming connections and accepts client requests and delegates them to `HttpRequestHandler`.  
-  - **`stopServer()`**: Stops the server by closing the server socket.
+  - **`HttpRequestHandlerImpl(Socket clientSocket, String path)`**: Constructor for initializing the socket and static file path.  
+  - **`handlerRequest()`**: Reads and processes the request, redirects based on HTTP method (GET/POST).  
+  - **`run()`**: Implements `Runnable`, calls `handlerRequest()` when executed in a thread.  
+  - **`redirectMethod(String method, String file)`**: Redirects request to appropriate handler based on method and file.  
+  - **`handlerRequestApp(String method, String fileRequest, String queryRequest)`**: Handles non-static file requests, delegates to the corresponding service.  
+  - **`invokeHandler(Method service, String query)`**: Executes service method with query parameters.  
+  - **`queryParams(String query)`**: Converts query string into key-value map.  
+  - **`requestStaticHandler(String file, String contentType)`**: Handles static file requests, sends the file to the client.  
+  - **`readFileData(String requestFile)`**: Reads file and returns as byte array.  
+  - **`fileExists(String filePath)`**: Checks if file exists at specified path.  
+  - **`getContentType(String requestFile)`**: Returns content type based on file extension.  
+  - **`requestHeader(String contentType, int contentLength, String code)`**: Generates HTTP response header.  
+  - **`notFound()`**: Returns custom 404 error page.  
 
-## Despliegue en aws
+### 6. **HttpRequestHandler**  
+  - **Responsibility**: Defines a contract for handling HTTP requests.  
+  - **Methods**:  
+    - **`run()`**: Method to handle the client's request, part of `Runnable` interface, enabling execution in a thread.
 
-Luego de la compilacion del codigo, obtener el target con todas las dependecias copiadas y el archivo Dockerfile configurado, tendremos que:
+### 7. **HttpServer**  
+  - **Responsibility**: Initializes and manages the HTTP server, handling client connections.  
+  - **Attributes**:  
+    - `static final int PORT`: The port number on which the server listens (35000).  
+    - `boolean running`: Controls whether the server is running.  
+    - `ServerSocket serverSocket`: The server socket for accepting connections.  
+    - `static String ruta`: The directory containing static resources.  
+  - **Methods**:  
+    - **`startServer()`**: Starts the server and listens for incoming connections and accepts client requests and delegates them to `HttpRequestHandler`.  
+    - **`stopServer()`**: Stops the server by closing the server socket.
 
-1. Ejecutar el comando para crear la imagen con nuestra respectiva configuracion docker build --tag httpserver . cuando termine con el comando docker ps podremos ver las imagenes que tenemos creadas o desde el docker Desktop
+# Deployment on AWS
+To successfully deploy the HTTP server, we had to add the following in the `pom.xml`:
 
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.0.1</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>package</phase>
+                    <goals><goal>copy-dependencies</goal></goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+    <resources>
+        <resource>
+            <directory>src/main/java/edu/escuelaing/arep/resources</directory>
+            <targetPath>${project.build.directory}/classes/edu/escuelaing/arep/resources</targetPath>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </resource>
+    </resources>
+</build>
+```
+
+After compiling the code, obtaining the target with all dependencies copied, and configuring the Dockerfile, we need to follow these steps:
+
+## 1. Create the Docker Image
+
+Run the following command to create the image with our respective configuration:
+
+```bash
+docker build --tag httpserver .
+```
+
+Once the process is complete, we can view the created images using the `docker ps` command or from Docker Desktop.
+
+### Example Output:
+
+```
 CONTAINER ID   IMAGE                                                                    COMMAND                  CREATED          STATUS          PORTS                      NAMES
 52244cb6230c   arep_modularization_with_virtualization_and_introduction_to_docker-web   "java -cp ./classes:…"   4 minutes ago    Up 4 minutes    0.0.0.0:8080->6000/tcp     httpServer
+```
 
-![alt text](images/dockerdesktopImagen1.png)
+![Docker Desktop Image](images/dockerdesktopImagen1.png)
 
+## 2. Create the Docker Container
 
-2. Crearemos el container docker run -d -p 34000:6000 --name httpservercontainer httpserver y en consola nos saldra el Id del contenedor 
+Run the following command to create the container:
+
+```bash
+docker run -d -p 34000:6000 --name httpservercontainer httpserver
+```
+
+In the console, you will see the container ID:
+
+```
 c208db106d2cb034c0e6b097376ede35a3950e1fb6ee9455559338e5277693bf
+```
 
-![alt text](images/dockerdesktopContainer1.png)
+![Container created in Docker Desktop](images/dockerdesktopContainer1.png)
 
-3. Ejecutamos el comando docker-compose up -d despues de haber configurado la red de contenedores en el archivo docker-compose y automaticamente se crea el contenedor obtenemos lo siguiente en consola 
+## 3. Configuration with Docker Compose
 
-![alt text](images/docker1.png)
-![alt text](images/docker2.png)
+Run the `docker-compose up -d` command after configuring the container network in the `docker-compose.yml` file. This will automatically create the container.
 
-4. Crearemos una imagen que apunte al repositorio que creamos en dockerHub con el siguiente comando 
-docker tag httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker y podemos evidenciar esto en las imagenes desde desktop de docker.
+### Example Console Output:
 
-![alt text](images/docker3.png)
+![Docker Compose](images/docker1.png)  
+![Docker Compose](images/docker2.png)
 
-5. Iniciamos sesion con docker login y ejecutamos el comando docker push mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest y con esto cargaremos la imagen en docker hub.
+## 4. Tag the Image for Docker Hub
 
-![alt text](images/docker4.png)
+To create an image pointing to our Docker Hub repository, use the following command:
 
+```bash
+docker tag httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker
+```
 
-6. Desde la maquina de aws instalaremos docker con el comando sudo yum install docker y al final nos saldra el siguiente mensaje
+We can verify that the image is correctly tagged in Docker Desktop:
+
+![Tagged Image in Docker Desktop](images/docker3.png)
+
+## 5. Push the Image to Docker Hub
+
+Log in to Docker Hub and push the image using the following command:
+
+```bash
+docker login
+docker push mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest
+```
+
+![Image uploaded to Docker Hub](images/docker4.png)
+
+## 6. Install Docker on AWS
+
+From the EC2 instance in AWS, install Docker with the following command:
+
+```bash
+sudo yum install docker
+```
+
+### Command Output:
+
+```
 Installed:
   containerd-1.7.25-1.amzn2023.0.1.x86_64
   docker-25.0.8-1.amzn2023.0.1.x86_64
@@ -355,39 +461,65 @@ Installed:
   runc-1.2.4-1.amzn2023.0.1.x86_64
 
 Complete!
+```
 
-7. Iniciamos docker  sudo service docker start
+## 7. Start the Docker Service
+
+Start the Docker service with the following command:
+
+```bash
+sudo service docker start
+```
+
+### Command Output:
+
+```
 Redirecting to /bin/systemctl start docker.service
+```
 
-8. Crearemos un usuario con permisos, esto es opcional si no queremos utilizar el "sudo antes de cada comando", si lo realizamos despues de ejecutar en comando debemos terminar la conexion ssh y volver a ingresar
+## 8. Create a User with Permissions (Optional)
 
+If you don’t want to use `sudo` before every Docker command, you can create a user with permissions:
+
+```bash
 sudo usermod -a -G docker ec2-user
+```
 
-9. Descargaremos la imagen que tenemos en el repositorio mandarina972310/modularization_with_virtualization_and_introduction_to_docker, con el comando
+After running this command, you must log out of the SSH session and log back in.
 
- docker run -d -p 8080:6000 --name httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker
+## 9. Pull the Image from Docker Hub
 
-10. Se debe habilitar el puerto que asignamos despues del -p en el comando anterior, esto lo realizaremos desde la opcion de security de aws y agregaremos una nueva regla
+Download the image from our Docker Hub repository using the following command:
 
-![alt text](images/security.png)
+```bash
+docker run -d -p 8080:6000 --name httpserver mandarina972310/modularization_with_virtualization_and_introduction_to_docker
+```
 
-11.Podremos consultar la pagina con el siguiente link http://http://ec2-44-203-95-133.compute-1.amazonaws.com:8080/index.html
-![alt text](image.png)
+## 10. Enable the Port on AWS
 
-Unable to find image 'mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest' locally
-latest: Pulling from mandarina972310/modularization_with_virtualization_and_introduction_to_docker
-5262579e8e45: Pull complete
-0eab4e2287a5: Pull complete
-7c002e8f6062: Pull complete
-337b80a2d7a0: Pull complete
-c5f810e84a39: Pull complete
-b48656c185bb: Pull complete
-Digest: sha256:3ff417efdcd782eaecae02ceb84772d85b10aceeb7a5a0de1638281046cf31c9
-Status: Downloaded newer image for mandarina972310/modularization_with_virtualization_and_introduction_to_docker:latest
-209181f116862af01921cb0033f301397a7e5a2abd5924c49a03d107a51cd0de
+We need to enable the port assigned in the previous command (`8080:6000`) in the AWS security settings. To do this, add a new rule in the security group.
 
+![AWS Security Configuration](images/security.png)
 
+## 11. Access the Application
 
+Once the port is enabled, we can access the page at the following link:
+
+[http://ec2-44-203-95-133.compute-1.amazonaws.com:8080/index.html](http://ec2-44-203-95-133.compute-1.amazonaws.com:8080/index.html)
+
+![Web Page](image.png)
+
+---
+
+### DEPLOYMENT VIDEO
+
+<video width="" height="" controls autoplay>
+  <source src="images/despliegue.mp4" type="video/mp4">
+</video>
+
+<video width="" height="" controls autoplay>
+  <source src="images/consulta.mp4" type="video/mp4">
+</video>
 
 ## TEST REPORT - Web Server IoC Framework
 

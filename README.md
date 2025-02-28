@@ -1,7 +1,7 @@
 
-# Web server with IoC Framework
+# Concurrent Web Server with IoC Framework and REST Services
 
-This project extends an existing web server into a full-featured framework, similar to Apache, focused on Java. It now uses annotations instead of lambda functions to define REST services. The server is capable of delivering HTML pages and PNG images. Additionally, it provides an Inversion of Control (IoC) framework for building web applications from POJOs, simplifying the development of modern and modular applications.
+This project extends an existing web server into a full-featured framework, similar to Apache, but focused on Java. It now uses annotations to define REST services, instead of lambda functions. The server is capable of delivering HTML pages and PNG images, and it also provides an Inversion of Control (IoC) framework for building web applications from POJOs. This simplifies the development of modern and modular applications. The framework now includes concurrency features and has been deployed on an AWS instance, enabling scalable and efficient handling of web requests.
 
 
 ## Getting Started

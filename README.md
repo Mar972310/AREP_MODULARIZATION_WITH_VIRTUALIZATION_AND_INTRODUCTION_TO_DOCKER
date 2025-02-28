@@ -119,14 +119,15 @@ You need to have the following installed:
    ![imagen](/images/image1.png)
 
 # Architecture
+![alt text](images/ar.png)
 
 ## Server directory structure
-![alt text](images/directory.png)
+![alt text](images/directoryy.png)
 
 ### **Core Components**  
 
 - **`HttpServer`**: The entry point of the application. Initializes the server, listens for incoming connections, and delegates request handling to `HttpRequestHandler`.  
-- **`HttpRequestHandler`**: Handles HTTP requests and responses. It processes incoming requests, determines whether to serve a static file or forward the request to a registered controller method.  
+- **`HttpRequestHandlerImpl`**: Handles HTTP requests and responses. It processes incoming requests, determines whether to serve a static file or forward the request to a registered controller method.  
 - **`FrameWorkSetting`**: The core framework that scans classes annotated with `@RestController`, registers methods annotated with `@GetMapping` and `@PostMapping`, and routes HTTP requests accordingly.  
 - **Annotations**: Includes custom annotations such as `@RestController`, `@GetMapping`, `@PostMapping`, and `@RequestParam` for defining web service routes and extracting parameters.  
 - **Controllers**:  
@@ -159,82 +160,6 @@ For the endpoint `GET /app/greeting?name=Maria`:
    - `FrameWorkSetting` identifies `GrettingController` and invokes the `greeting()` method.  
 4. **Response**: The method returns `"Hello Maria!"`, which is sent back to the user's browser.
 
-
-
-## 1. **HttpServer**  
-
-### **Role:**  
-Manages the lifecycle of the HTTP server, including handling incoming requests, storing static and dynamic REST endpoints, and routing requests to the appropriate handler.  
-
-### **Responsibilities:**  
-- Start and stop the server, listening on a specified port.  
-- Accept incoming client connections and delegate request processing to `HttpRequestHandler`.  
-- Store and manage static file paths for serving resources.  
-- Register and store **GET** and **POST** request handlers using lambda functions.  
-- Route incoming requests to the correct lambda function based on the HTTP method and path.  
-
-### **Lambda Functions for Dynamic REST API:**  
-- **`get(String path, BiFunction<HttpRequest, HttpResponse, String> restService)`**:  
-  - Registers a lambda function to handle **GET** requests for a specific path.  
-  - Example:  
-    ```java
-    get("/app/hello", (req, resp) -> "Hello, world");
-    ```  
-- **`post(String path, BiFunction<HttpRequest, HttpResponse, String> restService)`**:  
-  - Registers a lambda function to handle **POST** requests for a specific path.  
-  - Example:  
-    ```java
-    post("/app/hellopost", (req, resp) -> "Post received: " + req.getQueryParam("name"));
-    ```  
-
-## 2. **HttpRequestHandler**  
-
-### **Role:**  
-Processes client requests, determines the appropriate response, and redirects requests based on the HTTP method.
-
-### **Responsibilities:**  
-- Read and parse HTTP requests.  
-- Determine whether to serve static files or process a REST request.  
-- Redirect `GET` and `POST` requests to registered REST services.  
-- Serve static files from the specified directory.  
-- Send appropriate HTTP responses, handling errors like "404 Not Found."  
-- Close the client socket after processing the request.  
-
-
-## 3. **HttpResponse**  
-
-### **Role:**  
-Handles the construction and sending of HTTP responses, including status codes, headers, and body content.
-
-### **Responsibilities:**  
-- Set and manage HTTP status codes and messages.  
-- Store and manage HTTP headers.  
-- Store the response body.  
-- Send the complete HTTP response to the client via a `PrintWriter`.  
-
----
-
-## 4. **HttpRequest**  
-
-### **Role:**  
-Processes and extracts query parameters from an HTTP request.
-
-### **Responsibilities:**  
-- Parse query parameters from a URL-encoded string.  
-- Provide access to query parameters via the `getQueryParam` method.  
-- Decode query parameters to support special characters.  
-
-
-### Interaction Flow
-
-1. **Server Initialization**: The `HttpServer` starts and configures a `ServerSocket` on port 35000 (or the specified port). The server then waits for new client connections.
-
-2. **Request Handling**:
-   - When a client connects, the server accepts the connection and passes the socket to `HttpRequestHandler` to handle the request.
-   - Inside `HttpRequestHandler`, the HTTP request is analyzed to determine what file or resource is being requested. Depending on the type of file or request (HTML, CSS, images, or POST/GET requests), the appropriate response is prepared.
-   - The response is sent back to the client.
-
-3. **Server Shutdown**: When the server needs to stop, the `ServerSocket` is closed and the server is gracefully shut down.
 
 ## Class Diagram
 ![alt text](images/DiagramaClase.png)
@@ -529,9 +454,29 @@ Name: Maria Valentina Torres Monsalve
 
 ### Date
 
-Date: 13/02/2025
+Date: 27/02/2025
 
 ### Test conducted
+
+### Concurrency Test for Static Files
+
+- **`testConcurrency`**  
+  **Description**: Tests server's ability to handle multiple concurrent requests for the static file `index.html`.  
+  **Test Steps**:
+  1. Initiate 20 concurrent threads.
+  2. Each thread sends a `GET` request to `http://localhost:35000/index.html`.
+  3. Assert that each thread receives a `200 OK` response.
+  4. Ensure that all threads complete without errors.
+
+### Concurrency Test with Non-Existent File
+
+- **`testConcurrencyWithNonExistentFile`**  
+  **Description**: Tests server's behavior when multiple concurrent requests are made for a non-existent file `myPage.html`.  
+  **Test Steps**:
+  1. Initiate 5 concurrent threads.
+  2. Each thread sends a `GET` request to `http://localhost:35000/myPage.html`.
+  3. Assert that each thread receives a `404 Not Found` response.
+  4. Ensure that all threads complete without errors.
 
 ### **Static HTML File Loading Tests**  
 
@@ -581,11 +526,13 @@ Date: 13/02/2025
 
 ## **Mathematical Controller Tests**  
 
-- **`shouldLoadMathControllerPIWithQuery`**: Verifies that the API returns `{"response":"3,14159"}` when requesting `app/pi?decimals=5`.  
+- **`shouldLoadMathControllerPIWithQuery`**: Verifies that the API returns `{"response":"3.14159"}` when requesting `app/pi?decimals=5`.  
 
-- **`shouldLoadMathControllerPIWithoutQuery`**: Ensures that the API returns `{"response":"3,14"}` when requesting `app/pi` without parameters.  
+- **`shouldLoadMathControllerPIWithoutQuery`**: Ensures that the API returns `{"response":"3.
 
-- **`notShouldLoadMathControllerPIWithQuery`**: Ensures that the API **does not** return `{"response":"3,141"}` when requesting `app/pi?decimals=5`.  
+14"}` when requesting `app/pi` without parameters.  
+
+- **`notShouldLoadMathControllerPIWithQuery`**: Ensures that the API **does not** return `{"response":"3.141"}` when requesting `app/pi?decimals=5`.  
 ![alt text](images/pi1.png)
 ![alt text](images/pi2.png)
 ![alt text](images/pi3.png)
@@ -619,7 +566,10 @@ Date: 13/02/2025
 ![alt text](images/rest1.png)
 ![alt text](images/rest2.png)
 
-![test](images/test.png)
+With the `mvn test` command, we can run the tests on our server.
+
+
+![test](images/testFinal.png)
 
 ## Built With
 

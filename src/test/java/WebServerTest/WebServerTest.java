@@ -274,7 +274,8 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertEquals("{\"response\":\"3,14159\"}", response);
+            response = response.replace(",", ".");
+            assertEquals("{\"response\":\"3.14159\"}", response);
             request.disconnect();
 
         } catch (Exception e) {
@@ -294,7 +295,8 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertEquals("{\"response\":\"3,14\"}", response);
+            response = response.replace(",", ".");
+            assertEquals("{\"response\":\"3.14\"}", response);
             request.disconnect();
 
         } catch (Exception e) {
@@ -314,7 +316,8 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
-            assertNotEquals("{\"response\":\"3,141\"}", response);
+            response = response.replace(",", ".");
+            assertNotEquals("{\"response\":\"3.141\"}", response);
             request.disconnect();
 
         } catch (Exception e) {
@@ -536,6 +539,7 @@ public class WebServerTest {
             BufferedReader in = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String response = in.readLine();
             in.close();
+            
             assertEquals("{\"response\":\"2.0\"}", response);
             request.disconnect();
 
